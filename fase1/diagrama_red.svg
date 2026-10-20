@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" width="1200" height="660" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1200" height="660" fill="#ffffff"/>
+
+  <text x="600" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#0f172a">Diagrama de red de XSecurity en Azure</text>
+
+  <g>
+    <ellipse cx="560" cy="88" rx="44" ry="24" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+    <ellipse cx="610" cy="78" rx="50" ry="30" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+    <ellipse cx="655" cy="92" rx="40" ry="22" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5"/>
+    <rect x="530" y="80" width="150" height="30" fill="#f1f5f9"/>
+    <text x="605" y="98" text-anchor="middle" font-size="16" font-weight="bold" fill="#334155">Internet</text>
+  </g>
+
+  <text x="612" y="140" font-size="12" fill="#475569">SSH a la IP pública de vm-ventas-1</text>
+
+  <rect x="30" y="180" width="1140" height="420" rx="10" fill="#f8fafc" stroke="#f97316" stroke-width="2.5"/>
+  <text x="50" y="208" font-size="16" font-weight="bold" fill="#c2410c">VNet vnet-empresa-x · 10.0.0.0/24</text>
+  <text x="1150" y="208" text-anchor="end" font-size="13" fill="#9a3412">Grupo de recursos rg-empresa-x · North Central US</text>
+
+  <g>
+    <rect x="70" y="230" width="250" height="340" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+    <rect x="70" y="230" width="250" height="56" rx="8" fill="#16a34a"/>
+    <rect x="70" y="270" width="250" height="16" fill="#16a34a"/>
+    <text x="195" y="254" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Visitas</text>
+    <text x="195" y="275" text-anchor="middle" font-size="13" fill="#dcfce7">snet-visitas · 10.0.0.0/26</text>
+    <text x="90" y="312" font-size="12" fill="#14532d">Máscara 255.255.255.192</text>
+    <text x="90" y="330" font-size="12" fill="#14532d">Usables 10.0.0.4 a 10.0.0.62</text>
+    <text x="90" y="348" font-size="12" fill="#14532d">59 hosts en Azure · 50 requeridos</text>
+  </g>
+
+  <g>
+    <rect x="340" y="230" width="250" height="340" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+    <rect x="340" y="230" width="250" height="56" rx="8" fill="#16a34a"/>
+    <rect x="340" y="270" width="250" height="16" fill="#16a34a"/>
+    <text x="465" y="254" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Ventas</text>
+    <text x="465" y="275" text-anchor="middle" font-size="13" fill="#dcfce7">snet-ventas · 10.0.0.64/27</text>
+    <text x="360" y="312" font-size="12" fill="#14532d">Máscara 255.255.255.224</text>
+    <text x="360" y="330" font-size="12" fill="#14532d">Usables 10.0.0.68 a 10.0.0.94</text>
+    <text x="360" y="348" font-size="12" fill="#14532d">27 hosts en Azure · 25 requeridos</text>
+    <rect x="365" y="368" width="200" height="50" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="465" y="389" text-anchor="middle" font-size="13" font-weight="bold" fill="#0f172a">vm-ventas-1</text>
+    <text x="465" y="407" text-anchor="middle" font-size="12" fill="#334155">10.0.0.68 · IP pública</text>
+    <line x1="465" y1="430" x2="465" y2="468" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="6 4"/>
+    <polygon points="458,432 472,432 465,420" fill="#2563eb"/>
+    <polygon points="458,466 472,466 465,478" fill="#2563eb"/>
+    <rect x="474" y="436" width="90" height="22" rx="4" fill="#dbeafe"/>
+    <text x="519" y="451" text-anchor="middle" font-size="12" font-weight="bold" fill="#1d4ed8">ping ICMP</text>
+    <rect x="365" y="480" width="200" height="50" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="465" y="501" text-anchor="middle" font-size="13" font-weight="bold" fill="#0f172a">vm-ventas-2</text>
+    <text x="465" y="519" text-anchor="middle" font-size="12" fill="#334155">10.0.0.69</text>
+  </g>
+
+  <g>
+    <rect x="610" y="230" width="250" height="340" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+    <rect x="610" y="230" width="250" height="56" rx="8" fill="#16a34a"/>
+    <rect x="610" y="270" width="250" height="16" fill="#16a34a"/>
+    <text x="735" y="254" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">TI</text>
+    <text x="735" y="275" text-anchor="middle" font-size="13" fill="#dcfce7">snet-ti · 10.0.0.96/27</text>
+    <text x="630" y="312" font-size="12" fill="#14532d">Máscara 255.255.255.224</text>
+    <text x="630" y="330" font-size="12" fill="#14532d">Usables 10.0.0.100 a 10.0.0.126</text>
+    <text x="630" y="348" font-size="12" fill="#14532d">27 hosts en Azure · 15 requeridos</text>
+  </g>
+
+  <g>
+    <rect x="880" y="230" width="250" height="340" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+    <rect x="880" y="230" width="250" height="56" rx="8" fill="#16a34a"/>
+    <rect x="880" y="270" width="250" height="16" fill="#16a34a"/>
+    <text x="1005" y="254" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Data Center</text>
+    <text x="1005" y="275" text-anchor="middle" font-size="13" fill="#dcfce7">snet-datacenter · 10.0.0.128/28</text>
+    <text x="900" y="312" font-size="12" fill="#14532d">Máscara 255.255.255.240</text>
+    <text x="900" y="330" font-size="12" fill="#14532d">Usables 10.0.0.132 a 10.0.0.142</text>
+    <text x="900" y="348" font-size="12" fill="#14532d">11 hosts en Azure · 5 requeridos</text>
+  </g>
+
+  <path d="M600,116 L600,150 L330,150 L330,393 L355,393" fill="none" stroke="#475569" stroke-width="2"/>
+  <polygon points="353,386 353,400 365,393" fill="#475569"/>
+
+  <g font-size="12" fill="#334155">
+    <line x1="40" y1="630" x2="80" y2="630" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="6 4"/>
+    <text x="88" y="634">Prueba de conectividad</text>
+    <text x="1160" y="634" text-anchor="end">Libres para crecimiento: 10.0.0.144/28, 10.0.0.160/27, 10.0.0.192/26</text>
+  </g>
+</svg>
