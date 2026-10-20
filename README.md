@@ -4,7 +4,7 @@ CC3067 Redes, Universidad del Valle de Guatemala, 2026.
 
 Red en la nube para XSecurity, una startup de ciberseguridad. En la Fase 1 se dividió el bloque 10.0.0.0/24 en cuatro subredes (Visitas, Ventas, TI y Data Center), se creó la red en Azure y se probó con un ping entre dos máquinas virtuales de Ventas.
 
-El reporte está en [fase1/Reporte_Fase1_Redes.pdf](fase1/Reporte_Fase1_Redes.pdf).
+El reporte está en [fase1/reporte/Reporte_Fase1_Redes.pdf](fase1/reporte/Reporte_Fase1_Redes.pdf).
 
 ## Cómo correr el proyecto
 
@@ -50,4 +50,4 @@ bash fase1/azure/limpiar.sh
 
 **Los discos y la IP pública cobran aunque las VMs estén apagadas.** Por eso conviene correr `limpiar.sh` y no solo `apagar.sh`.
 
-**El cálculo de subredes se puede repetir** con `python3 fase1/subneteo.py`, y el PDF se regenera con `python3 fase1/reporte/generar_reporte.py`.
+**El cálculo de subredes se puede repetir** con `python3 fase1/subneteo/subneteo.py`.
